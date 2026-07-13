@@ -1,11 +1,11 @@
 {
-  "logo": "🏛️",
+  "logo": "💻",
   "nav": {
-    "title": "Philosophy Wiki"
+    "title": "Appunti Di Informatica (Sora)"
   },
-  "favicon": "🏛️",
+  "favicon": "💻",
   "showSidebar": true,
-  "title": "Philosophy Wiki",
+  "title": "Collegamenti",
   "theme": {
     "theme": "letterpress@0.1.6"
   }
