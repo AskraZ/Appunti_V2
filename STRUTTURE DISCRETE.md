@@ -60,10 +60,8 @@ diciamo che $P$ giustifica P e lo denotiamo con $$P\models P$$
 se ogni interpretazione I che soddisfa tutte le formule di $P$ soddisfa anche P.
 **ESEMPIO**
 sia $P=\{p,p\implies q\}$ allora $P\models q$
-![[Screenshot 2025-10-21 230924.png]]
-
 dimostriamo che se $P=\{p\vee r,q\vee \neg r\}$ allora $P\models p\vee q$
-![[Screenshot 2025-10-21 231149.png]]**CNF**
+**CNF**
 una formula p è in forma normale congiuntiva (CNF) se è scritta come congiunzione di disgiunzioni, per esempio $$(p\wedge q)\vee(\neg p\wedge \neg r\wedge s)$$
 **DNF**
 una formula p è in forma normale disgiuntiva (DNF) se è scritta come disgiunzione di congiunzioni, per esempio $$(p\wedge q)\vee(\neg p\wedge \neg r\wedge s)$$

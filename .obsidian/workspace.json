@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Architettura Degli Elaboratori.md",
+                "file": "Teorema Binomiale di Newton - Dimostrazione.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Architettura Degli Elaboratori"
+              "title": "Teorema Binomiale di Newton - Dimostrazione"
             }
           }
         ],
@@ -215,6 +215,10 @@
   "active": "f0326744d66f7d3c",
   "lastOpenFiles": [
     "STRUTTURE DISCRETE.md",
+    "Teorema Binomiale di Newton - Dimostrazione.md",
+    "Senza nome.md",
+    "index.md",
+    "Architettura Degli Elaboratori.md",
     "images.png",
     "1734702748422.jpeg",
     "Video Project.mp4",
@@ -230,9 +234,7 @@
     "Derivate.md",
     "ELEMENTI DI ANALISI 1.md",
     "Ripasso pre-esame.md",
-    "index.md",
     "PROGRAMMAZIONE 1.md",
-    "Programmazione I.md",
-    "Architettura Degli Elaboratori.md"
+    "Programmazione I.md"
   ]
 }
