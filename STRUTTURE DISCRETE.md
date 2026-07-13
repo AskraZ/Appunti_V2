@@ -250,7 +250,7 @@ sull'insieme $Z$ sono definite tre operazioni
 >VALORE ASSOLUTO
 >il valore assoluto di un intero relativo $n\in Z$ è l'intero $|n|\geq 0$ definito come $$|n|=\begin{cases}
 n,  & se \ n\geq 0 \\
--n,  & se \ n<0
+-n,  & se \ n\lt 0
 \end{cases}$$
 
 **ALCUNE PROPRIETA'**
@@ -272,10 +272,10 @@ per ogni $n,m\in Z$ abbiamo:
 	- Quindi, ogni numero naturale $n$, tranne lo $0$, ha un predecessore che è il numero $n-1$ 
 
 #### ASSIOMA DEL BUON ORDINAMENTO
-- utilizzando la funzione successore, possiamo, come sappiamo, introdurre una relazione d'ordinamento sui numeri naturali $<(\leq)$ definita, per ogni coppia $a,b\in N$ come 
+- utilizzando la funzione successore, possiamo, come sappiamo, introdurre una relazione d'ordinamento sui numeri naturali $\lt (\leq)$ definita, per ogni coppia $a,b\in N$ come 
 $$\begin{cases}
-a\le a \\ a<S(a) \\
-a<b \text{ se esiste} \ c\in N \ \text{tale che} \ a<c \wedge c<b
+a\le a \\ a\lt S(a) \\
+a\lt b \text{ se esiste} \ c\in N \ \text{tale che} \ a\lt c \wedge c\lt b
 \end{cases}$$
 > ASSIOMA DEL BUON ORDINAMENTO
 > se $S$ è un qualunque insieme non vuoto di numeri naturali, allora in $S$ esiste un elemento minimo, ovvero esiste $s\in S$ tale che $s\le t$ per ogni $t\in S$ 
@@ -348,7 +348,7 @@ $$D_{n,n}=n\cdot(n-1)\cdot\dots(n-n+1)=n!$$
 In una mensola da 5 posti ho 5 libri, in quanti modi posso posizionare i libri?
 $$D_{5,5}=5!=120$$
 #### COMBINAZIONI
-- Consideriamo l'insieme di tutte le $D_{n,k}$ applicazioni iniettive di un insieme A di $k>0$ elementi in un insieme $B$ di $n$ elementi $(k\leq n)$ 
+- Consideriamo l'insieme di tutte le $D_{n,k}$ applicazioni iniettive di un insieme A di $k\gt 0$ elementi in un insieme $B$ di $n$ elementi $(k\leq n)$ 
 $$f\approx g\iff f(A)=g(A)$$
 - Due applicazioni sono equivalenti se hanno la stessa immagine 
 $D_{n,k}=C_{n,k}\cdot k!$ da cui ricaviamo $$C_{n,k}=\frac{n\cdot(n-1)\cdot...\cdot(n-k+1)}{k!}$$
@@ -389,7 +389,7 @@ $$a^3+3a^2b+3ab^2+b^3$$
 $2^{n}=(1+1)^{n}=\sum\limits^{n}_{k=0}1^{n-k}\cdot1^{k}=\sum\limits^{n}_{k=0}\binom{n}{k}$
 ---
 #### COMBINAZIONI CON RIPETIZIONE 
-Dato un insieme di $n>1$ variabili, $\{x_{0},x_{1},\dots,x_{n-1}\}$ e preso un intero $k$, i monomi di grado $k$ sono:
+Dato un insieme di $n\gt 1$ variabili, $\{x_{0},x_{1},\dots,x_{n-1}\}$ e preso un intero $k$, i monomi di grado $k$ sono:
 $$C^{r}_{n,k}=\binom{n+k-1}{k}$$
 ###### ESEMPIO 
 Dato un insieme di 3 variabili, i monomi di grado 2 sono i seguenti:
