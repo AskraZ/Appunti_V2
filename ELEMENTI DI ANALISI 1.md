@@ -30,13 +30,10 @@ $l=inf \ f(A)\iff\begin{cases}l\leq f(x)\ \ \ \ \ \forall x \in A\\ \forall \eps
 Sia $f$ limitata superiormente
 
 $L=sup \ f(A)\iff\begin{cases}L\geq f(x) \ \ \ \ \forall x\in A \\ \forall \epsilon>0 \ \ \ \ \ \ \ \ \ \exists x'' \in A:f(x'')>L-\epsilon\end{cases}$
+
 ---
  Sia $f:A\subseteq R\to R$ 
  Si dice che $f$ ha minimo in $A$ se $\exists  min \ f  (a)$, ovvero se $\exists x'\in A:f(x')\leq f(x) \ \ \ \ \forall x\in A$
-
-
-
-
 
 # Successioni
 Una successione viene indicata con $$\{x_{1},x_{2},\dots,x_{n},\dots\} \  \text{oppure} \ \{x_n\}_{n\in N}$$
@@ -85,16 +82,18 @@ supponiamo $l>m$, $\epsilon=\frac{l-m}{2}>0$
 
 ---
 Per  $\exists \lim_{ n \to \infty }a_{n}=l$:
-$\exists \psi'\in N:\forall n>\psi'$     $l-\epsilon<a_{n}<\epsilon+l$  con $\epsilon=\frac{l-m}{2}$
+$\exists \psi'\in N:\forall n>\psi' \ \ \ \ l-\epsilon<a_{n}<\epsilon+l \ \ \ \ \epsilon=\frac{l-m}{2}$
 
 $\frac{l+m}{2}=l-\frac{l-m}{2}<a_{n}<l+\frac{l-m}{2} = \frac{3l-m}{2}$
 
 Per  $\exists \lim_{ n \to \infty }a_{n}=m$:
-$\exists \psi''\in N:\forall n>\psi''$     $m-\epsilon<a_{n}<\epsilon+m$  con $\epsilon=\frac{l-m}{2}$
+$\exists \psi''\in N:\forall n>\psi'' \ \ \ \ m-\epsilon<a_{n}<\epsilon+m \ \ \ \ \epsilon=\frac{l-m}{2}$
 
 $\frac{3m+l}{2}=\frac{l+m}{2}<a_{n}<\frac{l+m}{2} = \frac{m-l}{2}$
 
 # Limiti
 Sia $a\in R$ 
 $$\lim_{n\to \infty}n^a=\begin{cases}+\infty \ \ \ se \ a>0 \\ 1 \ \ \ \ \ \ \ \ se \  a =0 \\ 0 \ \ \ \ \ \ \ \ se\ a<0\end{cases}$$
+
+
 ---

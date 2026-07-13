@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ripasso pre-esame.md",
+                "file": "ELEMENTI DI ANALISI 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ripasso pre-esame"
+              "title": "ELEMENTI DI ANALISI 1"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ripasso pre-esame.md",
+                "file": "ELEMENTI DI ANALISI 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a Ripasso pre-esame"
+              "title": "Riferimenti a ELEMENTI DI ANALISI 1"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ripasso pre-esame.md",
+                "file": "ELEMENTI DI ANALISI 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da Ripasso pre-esame"
+              "title": "Collegamenti in uscita da ELEMENTI DI ANALISI 1"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ripasso pre-esame.md",
+                "file": "ELEMENTI DI ANALISI 1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Ripasso pre-esame"
+              "title": "Struttura di ELEMENTI DI ANALISI 1"
             }
           }
         ]
@@ -214,8 +214,8 @@
   },
   "active": "f0326744d66f7d3c",
   "lastOpenFiles": [
-    "ELEMENTI DI ANALISI 1.md",
     "Ripasso pre-esame.md",
+    "ELEMENTI DI ANALISI 1.md",
     "index.md",
     "Derivate.md",
     "PROGRAMMAZIONE II.md",
