@@ -67,12 +67,6 @@ dimostriamo che se $P=\{p\vee r,q\vee \neg r\}$ allora $P\models p\vee q$
 una formula p è in forma normale congiuntiva (CNF) se è scritta come congiunzione di disgiunzioni, per esempio $$(p\wedge q)\vee(\neg p\wedge \neg r\wedge s)$$
 **DNF**
 una formula p è in forma normale disgiuntiva (DNF) se è scritta come disgiunzione di congiunzioni, per esempio $$(p\wedge q)\vee(\neg p\wedge \neg r\wedge s)$$
-![[Screenshot 2025-10-21 231738.png]]
-
-![[Screenshot 2025-10-21 231812.png]]
-
-![[Screenshot 2025-10-21 231824.png]]
-
 # INSIEMI 
 un insieme è univocamente caratterizzato dal suo contenuto, ovvero dagli elementi che gli appartengono.
 > **APPARTENENZA**
@@ -193,7 +187,6 @@ scriveremo questo insieme come $pow(t)$
 > $pow(T)=\{\emptyset,1,2,3,(1,2),(1,3),(2,3),(1,2,3)\}$
 
 gli elementi dell'insieme delle parti sono $2^n$  (n=elementi)
-![[Screenshot 2025-10-22 144526.png]]
 
 una famiglia di insiemi che ha un numero infinito di elementi è una famiglia infinita.
 se invece ha un numero finito di elementi allora è una famiglia finita.

@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "STRUTTURE DISCRETE.md",
+                "file": "Architettura Degli Elaboratori.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "STRUTTURE DISCRETE"
+              "title": "Architettura Degli Elaboratori"
             }
           }
         ],
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "STRUTTURE DISCRETE.md",
+                "file": "Architettura Degli Elaboratori.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a STRUTTURE DISCRETE"
+              "title": "Riferimenti a Architettura Degli Elaboratori"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "STRUTTURE DISCRETE.md",
+                "file": "Architettura Degli Elaboratori.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da STRUTTURE DISCRETE"
+              "title": "Collegamenti in uscita da Architettura Degli Elaboratori"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "STRUTTURE DISCRETE.md",
+                "file": "Architettura Degli Elaboratori.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di STRUTTURE DISCRETE"
+              "title": "Struttura di Architettura Degli Elaboratori"
             }
           }
         ]
@@ -212,8 +212,9 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "3eebc24804f55c87",
+  "active": "f0326744d66f7d3c",
   "lastOpenFiles": [
+    "STRUTTURE DISCRETE.md",
     "images.png",
     "1734702748422.jpeg",
     "Video Project.mp4",
@@ -225,10 +226,8 @@
     "Schermata del 2026-06-23 13-18-51.png",
     "Schermata del 2026-06-22 16-23-35.png",
     "Schermata del 2026-06-20 11-08-59.png",
-    "Schermata del 2026-06-20 11-07-40.png",
     "PROGRAMMAZIONE II.md",
     "Derivate.md",
-    "STRUTTURE DISCRETE.md",
     "ELEMENTI DI ANALISI 1.md",
     "Ripasso pre-esame.md",
     "index.md",
