@@ -4,23 +4,27 @@ $g:[a,c] \to \mathbb{R}$
 $c\gt b \implies f(a) = g(a)$ 
 $f(b)=g(c)$
 
-\gt incremento di una funzione $f$ 
-\gt $\Delta f=f(b)-f(a)$ 
-\gt incremento della variabile $x$
-\gt $\Delta x=b-a$
+> incremento di una funzione $f$ 
+ $\Delta f=f(b)-f(a)$ 
+incremento della variabile $x$
+$\Delta x=b-a$
 
 $$\frac{\Delta f}{\Delta x}$$
 ---
+
 Sia ora $f:(a,b) \to R$, sia $x_{0}\in(a,b)$ 
 $\forall x\in(a,b)\ / \ \{x_0\}$
 $r(x)=\frac{f(x)-f(x_0)}{x-x_0}=\frac{\Delta f}{\Delta x}$ rapporto incremente di $f$ in $x_0$
 
 ---
+
 in modo diverso posso chiamare il generico punto di $(a,b), \ x_{0}+h,$  deve essere 
 $a \lt x_{0} + h \lt b\iff a-x_{0}\lt h\lt b-x_0$      $h\neq 0$
 ponendo $x = x_{0}+h$ da $r(x)$ si ottiene $R(x)=\frac{f(x_0+h)-f(x_0)}{h}$
 $r:(a,b) / \{x_{0}\}\to \mathbb{R}$     $R:(a-x_{0}, b-x_{0}) / \{0\} \to \mathbb{R}$ 
+
 ---
+
 dal teorema dei limiti delle funzioni composte si ha $\displaystyle{\lim_{x\to x_{0}}r(x)=\lim_{h\to 0}R(h)}$
 ### TEOREMA SUL RAPPORTO INCREMENTALE
 Una funzione f è **strettamente crescente** in un punto $x_0$​ se e solo se esiste un intorno $I(x_0​,s)$ di raggio $s\gt0$ tale che, per ogni $x$ appartenente all'intorno (con $x\neq x_0​)$, il rapporto incrementale è strettamente positivo:
@@ -44,9 +48,10 @@ Se $f$ è derivabile in ogni punto di $(a,b)$ si dice che è derivabile in $(a,b
 nasce allora la funzione derivata $f':(a,b)\to \mathbb{R}$ 
 se $f'$ ammette derivata in $x_0$, tale derivata è chiamata derivata seconda in $x_0$ ($f''$)
 
-\gt in modo simile si possono avere $f'''(x_{0}),f''''(x_{0}),f^n(x_0)$ 
+> in modo simile si possono avere $f'''(x_{0}),f''''(x_{0}),f^n(x_0)$ 
 
 ---
+
 esempi di funzione derivabile:
 $f(x)=\delta$
 $r(x)=\frac{\delta-\delta}{x-x_{0}}=0 \implies f'(x)=0$
@@ -54,8 +59,11 @@ $f(x)=x$
 $r(x)=\frac{x-x_{0}}{x-x_{0}}=1\implies f'(x)=1$ 
 $f(x)=x^2$
 $r(x)=\frac{x^{2}-x_{0}^{2}}{x-x_{0}}= x+x_{0} \to2x_{0} (\lim_{x\to x_{0}}x+x_{0})\implies f'(x)=2x$ 
+
 ---
-esempi di funzione non derivabile 
+
+> esempi di funzione non derivabile 
+
 $f(x)=\sqrt{x} \ \ (x_{0}=0)$
 $r(x)=\frac{\sqrt{x}-0}{x-0}=\frac{\sqrt{x}}{x}\to \frac{1}{\sqrt{x}}\ \implies \lim_{x\to x_{0}^+}r(x)=+\infty$ 
 $f(x)=|x|$  $(x_0=0)$
@@ -105,6 +113,7 @@ $L=f_{+}'(x_{0})$ derivata destra
 e la funziona sarà non derivabile.
 
 ---
+
 se $r(x)$ diverge si può dimostrare che il grafico ha tangente verticale.
 
 punto di flesso -\gt una funzione ha tangente verticale se $f''(x)$ cambia segno
@@ -118,6 +127,7 @@ $f(a,b)\in \mathbb{R}$  $x_{0}\in (a,b)$  $\exists f'(x_{0})$
 $h\in \mathbb{R}$ ne consegue $g(x)=hf(x)$   si ha $g'(x_{0})=hf'(x_{0})$
 
 ---
+
 La derivata di una somma di funzioni derivabili è uguale alla somma delle rispettive derivate.
 $f,g:(a,b)\to \mathbb{R}$  $x_{0}\in (a,b)$   $\exists f'(x_{0}), g'(x_{0})$
 consegue: $s(x)=f(x)+g(x)$ si ha $s'(x_{0})=f'(x_{0})+g'(x_{0})$
@@ -125,6 +135,7 @@ consegue: $s(x)=f(x)+g(x)$ si ha $s'(x_{0})=f'(x_{0})+g'(x_{0})$
 ne segue che posto $c(x)=hf(x)+hg(x)$ si ha $c'(x_{0})=hf'(x_0)+hg'(x_0)$
 
 ---
+
 Se una funzione è derivabile in un punto e in quel punto non si annulla (condizione fondamentale per non dividere per zero), allora anche la sua funzione reciproca è derivabile in quel punto.
 
 Sia $f:(a,b)\to \mathbb{R}$   $x_{0}\in (a,b)$  $\exists f'(x_{0})$    $f(x_{0})\neq 0$
@@ -132,10 +143,12 @@ possiamo constatare la funzione reciproca $f(x)=\frac{1}{f(x)}$
 si ha $f'(x_{0})=-\frac{f'(x_0)}{(f(x_{0}))^2}$ (opposto della derivata prima cambiata di segno fratto $f(x)^2$)
 
 ---
+
 Siano $f,g:(a,b)\to \mathbb{R}$   $x_{0}\in(a,b)$   $\exists f'(x_{0}), g'(x_{0})$   $g(x_{0})\neq 0$
 considerato  $q(x)=\frac{f(x)}{g(x)}$   si ha $q'(x_{0})=\frac{f'(x_{0})g(x_{0})-f(x_{0})g'(x_{0})}{(g(x_{0}))^2}$ 
 
 ---
+
 Siano 
 $f:(\alpha,\beta)\to \mathbb{R}$
 $g:(a,b)\to (\alpha, \beta)$
@@ -166,18 +179,22 @@ $f(x)=x^\alpha$   $\alpha\in R$   $x\gt0$
 $f(x)=x^{\alpha e^{\alpha \log x}\implies}f'(x)=e^{\alpha \log_{} x} = \alpha \frac{1}{x}=x^{\alpha }\alpha\frac{1}{x}=\alpha x^{\alpha-1}$ 
 
 $x^{\alpha}\cdot \alpha x^{-1}=\alpha x^{\alpha - 1}$ 
+
 ---
+
 $f(x)=\sin x$    $R(h)=\frac{\sin(x_0+h)-\sin(x_{0})}{h}=\frac{\sin x_{0}\cdot \cos h+\cos x_{0}\cdot \sin h-\sin x_{0}}{h}=\sin x_{0}\frac{\cos h-1}{h}+\cos x_{0}\frac{\sin h}{h}\to \cos x_{0}$
 
 $f(x)=\cos x\implies f'(x)=-\sin x$
 $f(x)=\tan x=\frac{\sin x}{\cos x}\implies f'(x)=\frac{\cos^{2}x+\sin^{2}x}{cos^{2}x}=1+\tan^{2}x$ 
 
 ---
+
 $f:(a,b)\to R$  $x_{0}\in(a,b)$ 
 $f'(x_{0})=\lim\limits_{x\to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}=\lim\limits_{h\to 0}\frac{f(x_{0}+h)-f(x_{0})}{h}$
 
 $f_{-}'(x_{0})=\lim\limits_{x\to x_{0}^-}r(x)$  derivata sinistra
 $f_{+}'(x_{0})=\lim\limits_{x\to x_{0}^{+}}r(x)$  derivata destra 
+
 #### DERIVATE PER STUDIO DI FUNZIONE 
 Ricordiamo che data $f:(a,b)\to R$ 
 - $f$ cresce strettamente in $(a,b)$ se $x\lt y\implies f(x)\lt f(y)$
@@ -258,6 +275,7 @@ per il teorema di fermat, $c$ potrebbe essere un punto di estremo relativo.
 per sapere se lo è occorre trovare $r\gt0$ : in $I(c,r) \ \ f(x)$ è sempre $(\leq) \vee (\geq) f(c)$
 
 ---
+
 Supponiamo che $f$ sia derivabile in $(a,b)$, studiamo il segno di $f'$
 ![[Schermata del 2026-06-23 13-18-51.png]]
 allora $c$ è un punto di estremo relativo.
