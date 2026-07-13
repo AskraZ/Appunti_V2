@@ -271,20 +271,25 @@ per ogni $n,m\in Z$ abbiamo:
 	- infine, dato un numero naturale $n$ ed il suo successore $S(n)$ diciamo che $n$ è il predecessore di $S(n)$ , denotato con $P(S(n))$.
 	- Quindi, ogni numero naturale $n$, tranne lo $0$, ha un predecessore che è il numero $n-1$ 
 
-#### ASSIOMA DEL BUON ORDINAMENTO
-- utilizzando la funzione successore, possiamo, come sappiamo, introdurre una relazione d'ordinamento sui numeri naturali $\lt (\leq)$ definita, per ogni coppia $a,b\in N$ come 
-$$\begin{cases}
-a\le a \\ a\lt S(a) \\
-a\lt b \text{ se esiste} \ c\in N \ \text{tale che} \ a\lt c \wedge c\lt b
-\end{cases}$$
+$$
+\begin{cases}
+a\le a \\ 
+a\lt S(a) \\
+a\lt b \text{ se esiste } c\in N \text{ tale che } a\lt c \wedge c\lt b
+\end{cases}
+$$
+
 > ASSIOMA DEL BUON ORDINAMENTO
-> se $S$ è un qualunque insieme non vuoto di numeri naturali, allora in $S$ esiste un elemento minimo, ovvero esiste $s\in S$ tale che $s\le t$ per ogni $t\in S$ 
+> se $S$ è un qualunque insieme non vuoto di numeri naturali, allora 
+in $S$ esiste un elemento minimo, ovvero esiste $s\in S$ tale che $s\le 
+t$ per ogni $t\in S$ 
 
 **PROPRIETA'** ($Z$)
 SOMMA  
 - $a+b=b+a$
 - $a+b+c=a+(b+c)=(a+b)+c$
 - $a+0=0+a=a$
+
 PRODOTTO
 - $a\cdot b=b\cdot a$ 
 - $a\cdot b\cdot c=a\cdot(b\cdot c)=(a\cdot b)\cdot c$
@@ -293,19 +298,26 @@ PRODOTTO
 - $a\cdot 0=0\cdot a=0$
 
 #### PRINCIPIO DI INDUZIONE
-- se una proprietà $P$ è posseduta dal numero $0$ e la proprietà $P$ è posseduta anche dal successore di ogni numero naturale che possiede la proprietà $P$, allora la proprietà $P$ è posseduta da tutti i numeri naturali
+- se una proprietà $P$ è posseduta dal numero $0$ e la proprietà $P$ è 
+posseduta anche dal successore di ogni numero naturale che possiede la 
+proprietà $P$, allora la proprietà $P$ è posseduta da tutti i numeri 
+naturali
+
 > **TEOREMA**
-	sia $P$ una affermazione riguardante i numeri naturali. se
-	(a). $P(0)$ è vera, ed inoltre
-	(b). per ogni numero naturale n se $P(n)$ è vera allora è vera anche $P(n+1)$
+> sia $P$ una affermazione riguardante i numeri naturali. se
+> (a). $P(0)$ è vera, ed inoltre
+> (b). per ogni numero naturale $n$ se $P(n)$ è vera allora è vera anche $P(n+1)$
 	
 ##### DIMOSTRAZIONE 
-ragioniamo per assurdo e supponiamo falsa la tesi, ossia supponiamo che esista almeno un numero naturale $n$ per cui $P(n)$ è falsa. 
+ragioniamo per assurdo e supponiamo falsa la tesi, ossia supponiamo che 
+esista almeno un numero naturale $n$ per cui $P(n)$ è falsa. 
 costruiamo l'insieme:
-$$S=\{n:n\in N, e \ P(n)\ è\ falsa\}$$
+
+$$S=\{n:n\in N, \text{ e } P(n) \text{ è falsa}\}$$
+
 per la nostra ipotesi di assurdo $S$ non è vuoto. 
 Per l'assioma del Buon Ordinamento esiste in $S$ un elemento minimo $s$.
-per definizione di $S$ , $P(s)$ è falsa.
+per definizione di $S$, $P(s)$ è falsa.
 
 # PARTE 3
 ## DISPOSIZIONI E COMBINAZIONI
@@ -314,142 +326,208 @@ per definizione di $S$ , $P(s)$ è falsa.
 - Dati due insiemi A e B, con $|A|=k, \ |B|=n$ quante sono le applicazioni iniettive di A in B?
 	- Numero delle disposizioni semplici di n elementi di classe k: denotato con $D_{n,k}$
 - Dato un insieme B, con $|B|=n$, e preso un intero $k \leq n$, quanti sono i sottinsiemi di B composti di $k$ elementi?
-	- Numero delle combinazioni di $n$ elementi di classe $k$: denotato con $C_ {n,k}$
+	- Numero delle combinazioni di $n$ elementi di classe $k$: denotato con $C_{n,k}$
 - Dato un insieme di $n$ variabili, $\{x_1,x_2,\dots,x_n\}$ e preso un intero $k \leq n$, quanti sono i monomi con coefficiente $1$ di grado k definiti sulle n variabili date?
 	- Numero delle combinazioni di n elementi di classe k con ripetizione: denotato con $C^{r}_{n,k}$
+
 ---
 #### DISPOSIZIONI CON RIPETIZIONE 
-Per calcolare $F_{n,k}$ utilizziamo la regola del prodotto: per ognuno dei k elementi di $A$ dobbiamo scegliere uno tra gli elementi di $B$ che sono $n$.
+Per calcolare $F_{n,k}$ utilizziamo la regola del prodotto: per ognuno 
+dei k elementi di $A$ dobbiamo scegliere uno tra gli elementi di $B$ che sono $n$.
+
 $$F_{n,k}=n^{k}$$
+
 ###### ESEMPIO 
 Quante sono le funzioni booleane definite su un insieme di $k$ variabili booleane?
 $f:A\to\{0,1\}$
 $F_{2,k}=2^k$
+
 ---
 
 Devi impostare il pin dello smartphone, da $n = 4$ numeri e $k=0,1,\dots,9$ 
 le possibili combinazioni sono $F_{n,k}=4^{10}$ 
+
 #### DISPOSIZIONI SEMPLICI 
-Come prima cosa, notiamo che affinché esista un'applicazione iniettiva da A in B, con $|A|=k$ e $|B|=n$ deve essere $n\geq k$.
+Come prima cosa, notiamo che affinché esista un'applicazione iniettiva 
+da A in B, con $|A|=k$ e $|B|=n$ deve essere $n\geq k$.
 per calcolare $D_{n,k}$ utilizziamo la regola del prodotto.
 Dobbiamo fare $k$ operazioni di scelta tali che:
 - La prima operazioni si può fare in $n$ modi
 - la seconda operazione si può fare in $n-1$ modi, numero costante
-- la $k-$esima operazione si può fare in $n-k+1$ modi, numero costante
+- la $k$-esima operazione si può fare in $n-k+1$ modi, numero costante
 allora il numero di scelte totali è:
+
 $$D_{n,k}=n\cdot(n-1)\cdot\dots(n-k+1)=\frac{n!}{(n-k)!}$$
+
 ---
 
 Quante squadre di calcio posso formare con un gruppo di 50 studenti?
-$n =50$ $k=11$ 
-$$\frac{50!}{(50-11)!}=\frac{50!}{39!}=50\cdot49\cdot48\cdot\dots40=1,5\cdot10^{18}$$
+$n =50$, $k=11$ 
+
+$$\frac{50!}{(50-11)!}=\frac{50!}{39!}=50\cdot49\cdot48\cdot\dots\cdot40=1,5\cdot10^{18}$$
+
 #### PERMUTAZIONI 
 Il numero di permutazioni semplici è il numero di disposizioni semplici di classe $n$ 
+
 $$D_{n,n}=n\cdot(n-1)\cdot\dots(n-n+1)=n!$$
 
 ---
 
 In una mensola da 5 posti ho 5 libri, in quanti modi posso posizionare i libri?
+
 $$D_{5,5}=5!=120$$
+
 #### COMBINAZIONI
 - Consideriamo l'insieme di tutte le $D_{n,k}$ applicazioni iniettive di un insieme A di $k\gt 0$ elementi in un insieme $B$ di $n$ elementi $(k\leq n)$ 
+
 $$f\approx g\iff f(A)=g(A)$$
-- Due applicazioni sono equivalenti se hanno la stessa immagine 
-$D_{n,k}=C_{n,k}\cdot k!$ da cui ricaviamo $$C_{n,k}=\frac{n\cdot(n-1)\cdot...\cdot(n-k+1)}{k!}$$
-I valori di $C_{n,k}$ sono detti coefficienti binomiali ed indicati con: $$\binom{n}{k}$$dato che $\binom{n}{k}=\frac{n\cdot(n-1)\cdot...\cdot (n-k+1)}{k!}=\frac{n\cdot(n-1)\cdot...\cdot (n-k+1)}{k!}\cdot \frac{(n-k!)}{(n-k)!}=\frac{n!}{k!(n-k)!}$
+
+- Due applicazioni sono equivalenti se hanno la stessa immagine $D_{n,k}=C_{n,k}\cdot k!$ da cui ricaviamo 
+
+$$C_{n,k}=\frac{n\cdot(n-1)\cdot\dots\cdot(n-k+1)}{k!}$$
+
+I valori di $C_{n,k}$ sono detti coefficienti binomiali ed indicati con:
+
+$$\binom{n}{k}$$
+
+dato che: 
+
+$$\binom{n}{k}=\frac{n\cdot(n-1)\cdot\dots\cdot (n-k+1)}{k!}=\frac{n\cdot(n-1)\cdot\dots\cdot (n-k+1)}{k!}\cdot \frac{(n-k)!}{(n-k)!}=\frac{n!}{k!(n-k)!}$$
+
 $$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
+
 ---
 
 In un bancone ci sono 10 gusti di gelato diversi, e ne puoi scegliere 3 differenti.
-$$\binom{10}{3}=\frac{10!}{3(10-3)!}=\frac{10!}{3!\cdot 7!}=\frac{10\cdot 9\cdot 8}{3\cdot 2}=\frac{720}{6}=120$$
+
+$$\binom{10}{3}=\frac{10!}{3!(10-3)!}=\frac{10!}{3!\cdot 7!}=\frac{10\cdot 9\cdot 8}{3\cdot 2}=\frac{720}{6}=120$$
+
 ---
 
 In una classe ci sono 23 studenti, quante combinazioni di 7 persone sono possibili?
+
 $$\binom{23}{7}=\frac{23!}{7!(23-7)!}=\frac{23!}{7!\cdot 16!}=\frac{23\cdot22\cdot 21\cdot 20\cdot 19\cdot 18\cdot 17}{7!}=\frac{1235591280}{5040}=245157$$
 
 ### TEOREMA BINOMIALE (FORMULA DI NEWTON)
-Siano $a$ e $b$ $\in \mathbb{R}$, allora $$(a+b)^{n}=\sum\limits^{n}_{k=0}a^{n-k}\cdot b^{k}$$
+Siano $a$ e $b \in \mathbb{R}$, allora 
+
+$$(a+b)^{n}=\sum\limits^{n}_{k=0}a^{n-k}\cdot b^{k}$$
+
 ###### DIMOSTRAZIONE 
 La potenza $(a+b)^{n}$ è il prodotto di $n$ fattori tutti uguali a $(a+b)$
-$$(a+b)\cdot(a+b)...\cdot(a+b)$$
+
+$$(a+b)\cdot(a+b)\dots\cdot(a+b)$$
+
 otteniamo una somma di monomi tutti di grado $n$ del tipo $a^{n-k}\cdot b^{k}$ con $0\leq k\leq n$
 in particolare, i monomi $a^{n}b^{0}=a^{n}$ e $a^{0}b^{n}=b^{n}$ compariranno nella somma una sola volta.
 
-Quante volte compare nella somma $a^{n-1}b$ ?
+Quante volte compare nella somma $a^{n-1}b$?
 
 tante volte quanti sono i modi di scegliere $n-1$ degli $n$ fattori, da cui scegliere $a$ per sviluppare il prodotto, ovvero $\binom{n}{n-1}=n$.
 
-In generale, il monomio $a^{n-k}b^{k}$ compare tante volte quanti sono i modi di scegliere $n-k$ degli n fattori da cui scegliere $a$ per sviluppare il prodotto, ovvero $\binom{n}{k}$
-$\triangle$
+In generale, il monomio $a^{n-k}b^{k}$ compare tante volte quanti sono i modi di scegliere $n-k$ degli n fattori da cui scegliere $a$ per sviluppare il prodotto, ovvero $\binom{n}{k}$ $\triangle$
+
 [[Teorema Binomiale di Newton - Dimostrazione]]
 
 ---
 
 $(a+b)^3$
-$a^3b^0=a^{3}\to\binom{3}{0}=\frac{3!}{0(3!)}=\frac{3!}{3!}=1$
-$a^2b^{1}\to\binom{3}{1}=\frac{3!}{1!(2)!}=\frac{6}{2}=3$
-$a^1b^2\to\binom{3}{2}=\frac{3!}{2!(1)!}=\frac{6}{2}=3$
+$a^3b^0=a^{3}\to\binom{3}{0}=\frac{3!}{0!(3!)}=\frac{3!}{3!}=1$
+$a^2b^{1}\to\binom{3}{1}=\frac{3!}{1!(2!)}=\frac{6}{2}=3$
+$a^1b^2\to\binom{3}{2}=\frac{3!}{2!(1!)}=\frac{6}{2}=3$
 $a^0b^3=b^3\to\binom{3}{3}=\frac{3!}{3!(3-3)!}=\frac{6}{6}=1$
+
 $$a^3+3a^2b+3ab^2+b^3$$
+
 ---
 
 1. $\sum\limits^{n}_{k=0}\binom{n}{k}=2^{n}$, infatti:
-$2^{n}=(1+1)^{n}=\sum\limits^{n}_{k=0}1^{n-k}\cdot1^{k}=\sum\limits^{n}_{k=0}\binom{n}{k}$
+
+$$2^{n}=(1+1)^{n}=\sum\limits^{n}_{k=0}1^{n-k}\cdot1^{k}=\sum\limits^{n}_{k=0}\binom{n}{k}$$
 
 ---
 #### COMBINAZIONI CON RIPETIZIONE 
 Dato un insieme di $n\gt 1$ variabili, $\{x_{0},x_{1},\dots,x_{n-1}\}$ e preso un intero $k$, i monomi di grado $k$ sono:
+
 $$C^{r}_{n,k}=\binom{n+k-1}{k}$$
+
 ###### ESEMPIO 
 Dato un insieme di 3 variabili, i monomi di grado 2 sono i seguenti:
+
 $$6=\binom{3+2-1}{2}=\binom{4}{2}=\frac{4!}{2!(4-2)!}=\frac{24}{4}=6$$
 
 ---
 
 Dati 5 ragazzi, e dati 23 ghiaccioli uguali, quanti modi diversi di darli abbiamo?
-	$$\binom{27}{23}=\frac{27!}{23!(4)!}=\frac{421200}{24}=17550$$
+
+$$\binom{27}{23}=\frac{27!}{23!(4)!}=\frac{421200}{24}=17550$$
 
 ## PIGEONHOLE PRINCIPLE
-Nella sua forma più semplice, il principio afferma che se dobbiamo fare entrare $n+1$ piccioni in una piccionaia che contiene $n$ cassette, allora almeno una cassetta deve contenere più di un piccione.
-Più in generale, se abbiamo $n=km+1$ ogetti da sistemare in m contenitori, allora almeno un contenitore deve contenere $k+1$ oggetti.
+Nella sua forma più semplice, il principio afferma che se dobbiamo fare 
+entrare $n+1$ piccioni in una piccionaia che contiene $n$ cassette, 
+allora almeno una cassetta deve contenere più di un piccione.
+Più in generale, se abbiamo $n=km+1$ ogetti da sistemare in m 
+contenitori, allora almeno un contenitore deve contenere $k+1$ oggetti.
 
 ---
 
 Immaginiamo di avere il cassetto di un comodino pieno di calzini, neri e blu.
-vogliamo prendere al buio, il numero minimo di calzini sufficiente ad avere una coppia completa.
-Immaginiamo che ogni cassetto sia un colore, se prendiamo 3 calzini ne avremo almeno due di un solo colore.
-infatti possiamo avere o 3 calzini dello stesso colore o 2 dello stesso colore e uno differente.
+vogliamo prendere al buio, il numero minimo di calzini sufficiente ad 
+avere una coppia completa.
+Immaginiamo che ogni cassetto sia un colore, se prendiamo 3 calzini ne 
+avremo almeno due di un solo colore.
+infatti possiamo avere o 3 calzini dello stesso colore o 2 dello stesso 
+colore e uno differente.
 
 ---
-Un essere umano in media ha circa $11000$ capelli in testa, alcuni $15000$ e altri $20000$.
+Un essere umano in media ha circa $11000$ capelli in testa, alcuni 
+$15000$ e altri $20000$.
 Esistono a catania due persone che hanno lo stesso numero di capelli?
 - SI:
 	- Catania ha più di $300000$ abitanti
-	- Dal momento che il numero di abitanti è superiore al numero massimo di capelli possibile, allora ci saranno almeno due individui con lo stesso numero di capelli
+	- Dal momento che il numero di abitanti è superiore al numero massimo 
+di capelli possibile, allora ci saranno almeno due individui con lo 
+stesso numero di capelli
+
 ## PROBABILITÀ DISCRETE
-La definizione classica della probabilità del verificarsi di un evento A è il rapporto tra il numero di casi favoreli $f_A$ ed il numero di casi totali $n$.
+La definizione classica della probabilità del verificarsi di un evento A
+ è il rapporto tra il numero di casi favoreli $f_A$ ed il numero di casi totali $n$.
+
 $$P(A)=\frac{f_A}{n}$$
+
 > Questa definizione assume che ogni evento ha la stessa probabilità di accadere.
 
 ---
 ###### ESEMPIO
-L'evento è "Esce un numero inferiore a $3$" lo spazio dei campioni è costituito da tutti i possibili esiti $S=\{1,2,3,4,5,6\}$ e gli esiti favorevoli sono $r=\{1,2\}$.
+L'evento è "Esce un numero inferiore a $3$" lo spazio dei campioni è 
+costituito da tutti i possibili esiti $S=\{1,2,3,4,5,6\}$ e gli esiti 
+favorevoli sono $r=\{1,2\}$.
+
 $$\frac{r}{S}=\frac{2}{6}=\frac{1}{3}$$
+
 #### TEORIA DELLA PROBABILITÀ
 Assiomi della teoria della probabilità:
 - Siano  A e B due eventi qualsiasi $\subset S$
-1. $0\leq P(A)\leq 1$ (la probabilità che accada qualcosa è compresa tra il non accadere e l'accade certamente).
-2. $P(S) = 1$  e $P(\emptyset)=0$ (la probabilità uno di tutti gli eventi possibili è 1, mentre la possibilità che accada un evento non esistente è 0).
-3. $P(A\cup B)=P(A)+P(B)-P(A\cap B)$ (la probabilità che accadano uno dei due eventi o entrambi)
-	1. se $A\cap B = 0$ significa che entrambi gli eventi non potranno mai accadere, quindi $P(A\cup B)=P(A)+P(B)$
+1. $0\leq P(A)\leq 1$ (la probabilità che accada qualcosa è compresa tra
+ il non accadere e l'accade certamente).
+2. $P(S) = 1$  e $P(\emptyset)=0$ (la probabilità uno di tutti gli 
+eventi possibili è 1, mentre la possibilità che accada un evento non 
+esistente è 0).
+3. $P(A\cup B)=P(A)+P(B)-P(A\cap B)$ (la probabilità che accadano uno 
+dei due eventi o entrambi)
+	1. se $A\cap B = \emptyset$ significa che entrambi gli eventi non potranno mai 
+accadere, quindi $P(A\cup B)=P(A)+P(B)$
 
 ---
 
-Il verificarsi di un evento talvolta può cambiare la probabilità che si verifichi un altro evento:
-$$P(A|B)=\frac{P(A\wedge B)}{P(B)}=P(A\wedge B)$$
+Il verificarsi di un evento talvolta può cambiare la probabilità che si 
+verifichi un altro evento:
+
+$$P(A|B)=\frac{P(A\wedge B)}{P(B)}$$
 
 #### INDIPENDENZA
-Lanciamo un dado 3 volte, la probabilità di ottenere $[3,3,3]$ è la stessa di ottenere $[2,1,6]$ o $[6,5,1]$.
+Lanciamo un dado 3 volte, la probabilità di ottenere $[3,3,3]$ è la 
+stessa di ottenere $[2,1,6]$ o $[6,5,1]$.
 
 #### REGOLA DI BAYES 
-	La probabilità di un evento A, condizionata al ve
+La probabilità di un evento A, condizionata al ve
