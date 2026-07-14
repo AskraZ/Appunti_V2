@@ -521,4 +521,208 @@ Lanciamo un dado 3 volte, la probabilità di ottenere $[3,3,3]$ è la
 stessa di ottenere $[2,1,6]$ o $[6,5,1]$.
 
 #### REGOLA DI BAYES 
-La probabilità di un evento A, condizionata al ve
+La probabilità di un evento A, condizionata al verificarsi di un evento B (non nullo) è definita come:
+$$P(A|B)=\frac{P(A\wedge B)}{P(B)}=P(A|B)\cdot P(B)=P(A\wedge B)$$
+Stesso risultato è $P(B|A):$
+$$P(B|A)=\frac{P(B\wedge A)}{P(A)}=P(B|A)\cdot P(A)=P(B\wedge A)$$
+Dal momento che $P(A\wedge B)=P(B\wedge A):$
+$$P(B|A)=\frac{P(A|B)\cdot P(B)}{P(A)}$$
+## TEOREMA DELLA PROBABILITÀ TOTALE
+Sia $A$ un evento e siano $B_{1},B_{2}\dots,B_{n}$ eventi mutualmente esclusivi, tali che $P(B_{i})\neq 0$ per ogni $i$ ed inoltre $P(B_{1}\vee B_{2}\vee\dots\vee B_{n}=1)$, ovvero gli eventi sono esaustivi.
+Allora:
+$$P(A)=P(A|B_{1})P(B_{1})+P(A|B_{2})P(B_{2})+\dots+P(A|B_{n})P(B_{n})=\sum^{n}_{i=1}P(A|B_{i})P(B_{i})$$
+###### DIMOSTRAZIONE 
+- Gli eventi $B_{1},B_{2},\dots ,B_{n}$ sono esaustivi, quindi almeno uno di loro si deve verificare.
+- Quindi se $A$ si verifica, ci sarà un evento $B_{j}$ tale che $B_{j}$ si verifica, dal momento che gli eventi $B_{i }$ sono mutualmente esclusivi abbiamo: $P(A)=P(A\wedge B_{1})+\dots+P(A\wedge B_{n})$
+- Dalla definizione di probabilità condizionata abbiamo che $$\forall i \ \ P(A\wedge B_{i})=P(A|B_{i})\cdot P(B_{i})$$$$\triangle$$
+---
+
+Supponiamo di dividere un mazzo di 52 carte in due mazzi: $M_{1}$ con 30 carte e $M_{2}$ con le rimanenti 22 carte.
+Supponiamo che in $M_{1}$ ci sono 3 assi, e in $M_{2}$ ce n'è solo 1.
+Scegliamo un mazzo a caso e da quel mazzo scegliamo una carta a caso.
+- Qual'è la probabilità di pescare un asso $P(A)$?
+Chiaramente, scegliendo $M_{1}$ abbiamo $P(A|M_{1})=\frac{3}{30}=\frac{1}{10}$
+Se scegliamo $M_{2}$ abbiamo $P(A|M_{2})=\frac{1}{22}$.
+$P(A)=P(A|M_{1})\cdot P(M_{1})+P(A|M_{2})\cdot P(M_{2})=\frac{1}{10}\cdot \frac{1}{2}+\frac{1}{22}\cdot \frac{1}{2}$
+$\frac{1}{20}+\frac{1}{44}=\frac{11+5}{220}=\frac{16}{220}=\frac{8}{110}=\frac{4}{55}$
+
+## PROBLEMI D'URNA
+I problemi d'urna sono eventi che possono essere formalizzati come "Estraiamo una o più palline numerate da una o più urne".
+Supponiamo di estrarre $k$ palline da un'urna contenente $n$ palline.
+nei 4 casi possibili, il numero totale è:
+- $D^{r}_{{n,k}}=n^{k}$ ovvero numero delle disposizioni con ripetizione se l'ordine è importante e la pallina viene reinserita dopo ogni estrazione.
+- $D_{n,k}=n\cdot (n-1)\cdot \ \dots \ \cdot (n-k+1)$ ovvero numero delle disposizioni semplici, se l'ordine è importante ma la pallina non viene reinserita.
+- $C_{n,k}=\binom{n}{k}=\frac{n!}{k!(n-k)!}$ ovvero combinazioni semplici, se l'ordine non è importante e la pallina estratta non viene reinserita.
+- $C^{r}_{n,k}=\frac{(n+k-1)!}{k!(n-1)!}$ ovvero numero combinazioni con ripetizione se l'ordine non è importante e la pallina viene reinserita.
+# TEORIA DEI GRAFI 
+###### DEFINIZIONE GRAFO NON ORIENTATO
+Un grafo semplice non orientato, denotato con $G=(V,E)$ consiste di:
+- un insieme finito, non vuoto $V={1,2,\dots,m}$ i cui elementi sono chiamati vertici o nodi del grafo
+- Un insieme finito $E=\{e_{1},e_{2},\dots,e_{n}\}$, i cui elementi sono sottoinsiemi di $V$ di cardinalità 2, ovvero $e_{k}=\{i,j\}$ con $i,j\in V$, anche detti archi del grafo.
+- I due nodi che caratterizzano l'arco sono detti "estremi dell'arco" e si dicono adiacenti.
+- Un arco che ha come estremo il nodo $i$ si dice "incidente" ad $i$
+- Un vertice che non è l'estremo di alcun arco si dice "isolato".
+###### DEFINIZIONE GRAFO ORIENTATO
+Un grafo semplice orientato, denotato con $G=(V,E)$ consiste di
+- Un insieme finito, non vuoto $V=\{1,2,\dots,m\}$ i  cui elementi sono chiamati nodi del grafo
+- Un insieme finito $E=\{e_{1},e_{2},\dots,e_{n}\}$ i cui elementi sono coppie ordinate di elementi di $V$ ovvero $e_{k}=(i,j)$ con $i,j\in V$
+- I due nodi toccati da $(i,j)$ sono detti estremi dell'arco e vengono definiti adiacenti.
+- Un arco che ha come estremo il nodo $i$, indipendentemente dal verso dell'arco, si dice "incidente" ad $i$.
+![[Schermata del 2026-07-13 12-04-54.png]]
+
+### MULTIGRAFI
+I grafi orientati e non, che hanno più di arco che collega coppie di nodi sono detti ==multigrafi==.
+
+#### GRADO DI UN NODO
+Dato un grafo $G=(V,E)$ il grado di un nodo $v\in V$, denotato con $\delta(v)$ è il numero di archi ad esso incidenti, ossia il numero di vertici ad esso adiacenti $$\delta(v)=|\{e\in E:v\in e\}|$$
+Se $G=(V,E)$ è un digrafo definiamo due nozioni diverse di grado di un nodo:$
+- grado di ingresso:        $\delta^{-}(v)=|\{e\in E: e=(w,v), \ w \in V\}|$
+- grado di uscita:            $\delta^{+}(v)=|\{e\in E: e=(v,w), \ w\in V\}|$
+#### HAND-SHAKING THEOREM
+Sia $G=(V,E)$ un grafo non orientato, allora la somma dei gradi di ogni vertice è uguale al doppio del numero degli archi: $2|E|$
+###### COROLLARIO
+Sia $G=(V,E)$ un grafo non orientato, il numero dei vertici di grado dispari è un numero pari.
+### GRAFI REGOLARI
+- Sia $G=(V,E)$ un grafo non orientato
+- Se i vertici del grafo hanno tutti lo stesso grado $r$ allora diciamo che $G$ è regolare di grado $r$
+$$|V|=\frac{2|E|}{r}$$
+- se $r$ è dispari allora $|V|$ è pari, ovvero un grafo regolare di grado dispari contiene un numero pari di vertici.
+### GRAFI COMPLETI
+- Sia $G=(V,E)$ un grafo non orientato.
+- Diciamo che $G$ è completo se ogni coppia di vertici è connessa da un arco.
+- Ne deduciamo allora che se $|V|=n$ il numero di archi del grafo completo è $\binom {n}{2}$ ovvero il numero di tutte le possibili coppie di vertici.
+- Un grafo completo con $n$ vertici viene denotato con $K_{n}$
+- Inoltre, $\forall n, \ K_{n}$ è un grafo regolare di grado $n-1$
+---
+### TORNEO
+- Sia $G=(V,E)$ un grafo completo, il grafo orientato ottenuto assegnando uno dei due possibili versi ad ogni arco di $G$, si dice Torneo
+- L'arco tra ogni coppia è orientato che se fosse vincitore - perdente.
+### GRAFI ORIENTATI COMPLETI
+La definizione di grafo completo si estende anche ai grafi orientati
+- Sia $G=(V,E)$ un grafo orientato, diciamo che $G$ è completo se ogni coppia di vertici è connessa da un arco, ovvero $\forall (i,j)\in E$  e  $(j,i)\in E$
+- Ne deduciamo allora che se $|V|=n$ il numero di archi del digrafo completo è $n(n-1)$ ovvero il numero di tutte le possibili coppie ordinate di vertici
+### GRAFI BIPARTITI
+Sia $G=(V,E)$ un grafo non orientato.
+Diciamo che $G$ è bipartito se possiamo partizionare l'insieme dei vertici in 2 insiemi, $V_{1}$ e $V_{2}$ in maniera tale che tutti gli archi di $G$ hanno come estremi un vertice in $V_{1}$ e l'altro vertice $V_{2}$
+![[Grafo_bipartito.jpg]]
+### GRAFI BIPARTITI COMPLETI
+Un grafo bipartito $G=(V,E)$ si dice completo se data la partizione dei vertici $V_{1},V_{2}$ esiste un arco per ogni coppia di vertici $v\in V_{1}$ e $u\in V_{2}$
+Un grafo bipartito completo si indica con $K_{n,m}$ dove $n=|V_{1}|$ e $m=|V_{2}|$
+![[Schermata del 2026-07-13 13-28-50.png]]
+### SOTTOGRAFO
+Sia $G=(V,E)$ un grafo non orientato.
+Diciamo che $G'=(V',E')$ è un sottografo di $G$ se:
+- $V'\subseteq V$
+- $E'\subseteq E$ ed inoltre per ogni arco $(u,v)\in E'$ i suoi estremi $u,v$ appartengono entrambi a $V'$
+![[Schermata del 2026-07-13 13-32-54.png|399]]
+---
+Sia $G=(V,E)$ un digrafo.
+Diciamo che $G'=(V',E')$ è un sottografo di $G$, anch'esso orientato:
+- $V' \subseteq V$
+- $E' \subseteq E$ ed inoltre per ogni arco $u,v\in E'$ i suoi estremi $u,v$ appartengono entrambi a $V'$.
+### SOTTOGRAFO INDOTTO
+Dalla definizione data di sottografo, sia per i grafi orientati che per quelli non orientati, si evince la seguente definizionee di sottografo indotto
+- Sia $G=(V,E)$ un grafo (digrafo).
+- Sia $V' \subseteq V$.
+il sottografo indotto da $V'$ e il sottografo $G=(V',E')$ ottenuto eliminando da $G$ tutti i vertici non appartenenti a $V'$ e tutti gli archi incidenti ad almeno uno dei vertici eliminati.
+### ISOMORFISMO TRA GRAFI 
+Due grafi, sia entrambi orientati che entrambi non orientati, $G_{1}=(V_{1},E_{1})$ e $G_{2}=(V_{2},E_{2})$ si dicono isomorfi se esiste una applicazione biunivoca $f$ nell'insieme dei vertici $V_{2}$ tale che $(f(u), f(v))$ è un arco di $E_{2} \iff (u,v)$ è un arco di $E_{1}$.
+La biiezione $f$ è detta isomorfismo.
+
+---
+Consideriamo i due grafi $G_{1}=(V_{1},E_{1})$ e $G_{2}=(V_{2},E_{2})$ così definiti:
+- $V_{1}=\{a,b,c,d\}$
+- $E_{1}=\{(a,b),(a,d),(b,c),(c,d)\}$
+- $V_{2}=\{t,u,v,w\}$
+- $E_{2}=\{(t,u),(t,v),(u,v),(u,w),(v,w)\}$
+La funzione $f:V_{1}\to V_{2}$ tale che 
+$f(a)=t$ | $f(b)=v$ | $(c)=w$ | $f(d)=u$
+è un isomorfismo.
+![[Schermata del 2026-07-13 17-45-58.png]]
+### OMEOMORFISMI
+Sia $G=(V,E)$ un grafo non orientato e sia $e=(u,v)$ un arco di $G$.
+Una suddivisione dell'arco $e=(u,v)$ è ottenuta introducendo un nuovo vertice $w$ e sostituendo in $G$ l'arco $(u,v)$ con gli archi $e_{1}=(u,w)$ e $e_{2}=(w,v)$
+
+![[Schermata del 2026-07-13 17-49-31.png]]
+---
+Sia $G=(V,E)$ un grafo orientato e sia $e=(u,v)$ un arco di $G$.
+una suddivisione dell'arco orientato $e=(u,v)$ è ottenuta introducendo un nuovo vertice $w$ e sostituendo in $G$ l'arco orientato $(u,v)$ con gli archi orientati $e_{1}=(u,w)$ e $e_{2}=(w,v)$
+![[Schermata del 2026-07-13 17-52-13.png]]
+
+---
+Due grafi non orientati, $G_{1}=(V_{1}, E_{1})$ e $G_{2}=(V_{2}, E_{2})$ si dicono omeomorfi se attraverso una serie di suddivisioni di archi di $G_{1}$ e $G_{2}$ si possono ottenere due grafi $G'_{1}$ e $G'_{2}$ che sono isomorfi.
+![[Schermata del 2026-07-13 17-54-49.png]]
+
+---
+Due grafi orientati $G_{1}=(V_{1},E_{1})$ e $G_{2}=(V_{2},E_{2})$ si dicono omeomorfi se attraverso una serie di suddivisioni di archi orientati di $G_{1}$ e $G_{2}$ si sono possono ottenere due grafi $G'_{1}$ e $G'_{2}$ che sono isomorfi.
+
+### PERCORSO
+Un percorso (diretto) in un grafo (digrafo) $G=(V,E)$ è una sequenza di nodi $v_{1},\dots,v_{k}$ adiacenti, ossia tali che $\forall i:1\leq i\lt k(v_{i},v_{i+1})$  è un arco del grafo
+- il nodo $v_{1}$ è detto nodo origine del percorso ed il nodo $v_{k}$ è detto nodo destinazione.
+- i nodi $v_{i}$ con $1\lt i\lt k$ sono detti nodi intermedi del percorso.
+- Possiamo definire un percorso anche tramite un sequenza di archi $e_{1},e_{2},\dots,e_{k-1}$ dove 
+	per ogni $1\leq j\lt k-1$ gli archi $e_{j}$ e $e_{j+1}$ hanno un vertice in comune
+> una qualsiasi sequenza di vertici
+
+### CAMMINO 
+Un percorso diretto in un grafo $G$ viene detto cammino se tutti i nodi sono diversi
+![[Schermata del 2026-07-13 18-18-20.png]]
+### CIRCUITO
+Un circuito diretto in un grafo è un percorso chiuso dove $v_{1}=v_{k}$ ed ogni vertice è ripetibile ma non gli archi.
+![[Schermata del 2026-07-13 18-20-06.png]]
+
+### CICLO
+Un ciclo in un grafo $G$ è un cammino chiuso tale che $v_{1}=v_{k}$ dove tutti i vertici sono diversi.
+- Se il grafo è orientato il minimo per formare un ciclo è 2
+- Se il grafo non è orientato il minimo è 3
+![[Schermata del 2026-07-13 18-23-11.png]]
+### GRAFI ACICLICI
+un grafo (digrafo) $G=(V,E)$ si dice aciclico se non possiede cicli.
+![[Schermata del 2026-07-13 19-49-52.png|435]]
+#### VERTICI CONNESSI 
+Dato un grafo $G=(V,E)$, diciamo che due vertici $u,v$ sono connessi se esiste un cammino da $u$ a $v$
+
+---
+Sia $G=(V,E)$ un grafo e sia $V=V_{1}\cup V_{2}\cup\dots \cup V_{k}$ la partizione indotta dalla relazione di connessione tra i vertici.
+Sia $G=(V_{i}, E_{i})$ il sottografo indotto da $V_{i}$ per ogni $i=1,\dots,k$.
+Tali sottografi si ==chiamano componenti connesse== di $G$.
+![[Schermata del 2026-07-14 11-26-11.png|625]]
+
+---
+### GRAFO CONNESSO
+Un grafo si dice connesso se ha solo una componente connessa, cioè se dati due vertici qualunque in $V$, i due vertici sono connessi.
+
+---
+##### DIGRAFO DEBOLMENTE CONNESSO
+Un digrafo $G=(V,E)$ si dice debolmente connesso, se il grafo non orientato ottenuto eliminando da $G$ l'orientamento degli archi è connesso.
+
+---
+##### DIGRAFO FORTEMENTE CONNESSO 
+Dato un grafo orientato $G=(V,E)$ diciamo che due vertici $u,v$ sono fortemente connessi se esiste un cammino da $u$ a $v$ che un cammino da $v$ a $u$.
+### GRAFI K-CONNESSI
+Sia dato $G=(V,E)$
+il grafo $G$ si dice k-connesso rispetto agli archi se dati due vertici $u,v\in V$ esistono $k$ cammini ad archi disgiunti tra $u,v$
+il grafo $G$ si dice k-connesso rispetto ai vertici se dati due vertici $u,v\in V$ esistono $k$ cammini a nodi disgiunti tra $u,v$
+## RAPPRESENTAZIONE
+#### MATRICE DI ADIACENZA
+Sia dato un grafo $G=(V,E)$ con $|V|=n$.
+Supponiamo $V=\{1,2,\dots,n\}$.
+Costruiamo una matrice $n \times n$:
+- $M[i,j]=1$ se $i,j$ sono connessi da un arco
+- $M[i,j]=0$ se $i,j$ non sono connessi da un arco 
+![[Schermata del 2026-07-14 18-38-17.png]]
+#### LISTE DI ADIACENZA 
+Dato un grafo $G=(V,E)$ con $|V|=n$ associamo al grafo una lista di array di dimensione $n$ 
+> grafo non orientato = $n+2|E|$ valori
+> grafo orientato = $2|E|$ valori 
+
+![[Schermata del 2026-07-14 19-40-37.png]]
+### CIRCUITO EULERIANO 
+Sia $G=(V,E)$ un grafo connesso.
+Un circuito euleriano di $G$ è un circuito che passa per ogni arco di $G$ esattamente una ed una sola volta.
+Un grafo si dice euleriano, se possiede un circuito euleriano.
+![[Schermata del 2026-07-14 19-58-22.png]]
+---
+Un grafo $G$ è euleriano se e solo se è connesso ed i suoi vertici hanno tutti grado pari.
+
+---

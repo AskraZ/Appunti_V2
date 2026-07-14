@@ -27,30 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "STRUTTURE DISCRETE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "f0326744d66f7d3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Teorema Binomiale di Newton - Dimostrazione.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Teorema Binomiale di Newton - Dimostrazione"
+              "title": "STRUTTURE DISCRETE"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "040e3872bdb7f334",
@@ -212,24 +199,25 @@
       "bases:Crea nuova Base": false
     }
   },
-  "active": "f0326744d66f7d3c",
+  "active": "624fdb08fe9b9649",
   "lastOpenFiles": [
-    "STRUTTURE DISCRETE.md",
-    "Teorema Binomiale di Newton - Dimostrazione.md",
-    "Senza nome.md",
+    "Schermata del 2026-07-14 19-58-22.png",
+    "Schermata del 2026-07-14 19-40-37.png",
+    "Schermata del 2026-07-14 18-38-17.png",
+    "Schermata del 2026-07-14 11-26-11.png",
+    "Schermata del 2026-07-13 19-49-52.png",
+    "Schermata del 2026-07-13 18-23-11.png",
+    "Schermata del 2026-07-13 18-20-06.png",
+    "Schermata del 2026-07-13 18-18-20.png",
+    "Schermata del 2026-07-13 17-54-49.png",
+    "Schermata del 2026-07-13 17-52-13.png",
+    "Schermata del 2026-07-13 17-49-31.png",
     "index.md",
+    "Teorema Binomiale di Newton - Dimostrazione.md",
+    "STRUTTURE DISCRETE.md",
+    "Senza nome.md",
     "Architettura Degli Elaboratori.md",
-    "images.png",
-    "1734702748422.jpeg",
     "Video Project.mp4",
-    "unnamed (1).png",
-    "unnamed.png",
-    "Screenshot 2026-04-24 142036.png",
-    "Screenshot 2026-04-24 130117.png",
-    "Screenshot 2026-04-24 125725.png",
-    "Schermata del 2026-06-23 13-18-51.png",
-    "Schermata del 2026-06-22 16-23-35.png",
-    "Schermata del 2026-06-20 11-08-59.png",
     "PROGRAMMAZIONE II.md",
     "Derivate.md",
     "ELEMENTI DI ANALISI 1.md",
