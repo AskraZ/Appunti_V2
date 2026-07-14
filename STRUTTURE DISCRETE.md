@@ -534,7 +534,8 @@ $$P(A)=P(A|B_{1})P(B_{1})+P(A|B_{2})P(B_{2})+\dots+P(A|B_{n})P(B_{n})=\sum^{n}_{
 ###### DIMOSTRAZIONE 
 - Gli eventi $B_{1},B_{2},\dots ,B_{n}$ sono esaustivi, quindi almeno uno di loro si deve verificare.
 - Quindi se $A$ si verifica, ci sarà un evento $B_{j}$ tale che $B_{j}$ si verifica, dal momento che gli eventi $B_{i }$ sono mutualmente esclusivi abbiamo: $P(A)=P(A\wedge B_{1})+\dots+P(A\wedge B_{n})$
-- Dalla definizione di probabilità condizionata abbiamo che $$\forall i \ \ P(A\wedge B_{i})=P(A|B_{i})\cdot P(B_{i})$$$$\triangle$$
+- Dalla definizione di probabilità condizionata abbiamo che $\forall i \ \ P(A\wedge B_{i})=P(A|B_{i})\cdot P(B_{i})$
+
 ---
 
 Supponiamo di dividere un mazzo di 52 carte in due mazzi: $M_{1}$ con 30 carte e $M_{2}$ con le rimanenti 22 carte.
