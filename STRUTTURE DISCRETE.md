@@ -718,12 +718,31 @@ Dato un grafo $G=(V,E)$ con $|V|=n$ associamo al grafo una lista di array di dim
 > grafo orientato = $2|E|$ valori 
 
 ![[Schermata del 2026-07-14 19-40-37.png]]
-### CIRCUITO EULERIANO 
+
+### CICLO EULERIANO 
 Sia $G=(V,E)$ un grafo connesso.
-Un circuito euleriano di $G$ è un circuito che passa per ogni arco di $G$ esattamente una ed una sola volta.
-Un grafo si dice euleriano, se possiede un circuito euleriano.
+Un ciclo euleriano di $G$ è un ciclo che passa per ogni arco di $G$ esattamente una ed una sola volta.
+Un grafo si dice euleriano, se possiede un ciclo euleriano.
 ![[Schermata del 2026-07-14 19-58-22.png]]
----
-Un grafo $G$ è euleriano se e solo se è connesso ed i suoi vertici hanno tutti grado pari.
+> Un grafo $G$ è euleriano se e solo se è connesso ed i suoi vertici hanno tutti grado pari.
 
 ---
+#### CAMMINO EULERIANO
+Un grafo $G$ possiede un cammino euleriano se e solo se è connesso ed i suoi vertici, tranne al più 2 hanno tutti grado pari.
+i due vertici di grado dispari, saranno il primo e l'ultimo vertice del cammino.
+![[Schermata del 2026-07-14 20-11-27.png]]
+
+### CAMMINO HAMILTONIANO
+Sia $G$ un grado (digrafo) connesso.
+Un cammino hamiltoniano di $G$ è un circuito che passa una ed una sola volta per tutti i vertici di $G$.
+Se il cammino è chiuso, ovvero se è un ciclo, tale ciclo si dice hamiltoniano.
+> un grafo si dice hamiltoniano se possiede un ciclo hamiltoniano.
+
+#### GRAFI PESATI
+Un grafo (digrafo) $G$ si dice pesato se è data un applicazione $$c:E\to \mathcal R$$
+oppure $$c:V\to \mathcal R$$
+
+---
+### GRAFI PLANARI
+sia $G$ un grafo non orientato.
+Diciamo che $G$ è planare se può essere raffigurato in un piano in modo che non si abbiano archi che si intersecano.
